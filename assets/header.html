@@ -1,0 +1,72 @@
+<header id="header">
+    <div class="wrap">
+      <a href="../index.html" class="brand"><img src="../assets/5c0b221b-21f7-4be0-adbf-2577d9aa0c45.png" alt="The Firm, Attorneys at Law"></a>
+      <nav class="main">
+        <a href="../index.html#philosophy">Philosophy</a>
+        <a href="../index.html#story">About</a>
+        <a href="../index.html#attorneys">Attorneys</a>
+        <div class="nav-dropdown">
+          <a href="#" onclick="event.preventDefault()">Practice Areas</a>
+          <div class="dropdown-menu">
+            <a href="../practice-areas/general-civil-law.html">General Civil Law</a>
+            <a href="../practice-areas/breach-of-contract-and-construction-law.html">Breach of Contract &amp; Construction Law</a>
+            <a href="../practice-areas/juvenile-law.html">Juvenile Law</a>
+            <a href="../practice-areas/family-law.html">Family Law</a>
+            <a href="../practice-areas/criminal-defense.html">Criminal Defense</a>
+            <div class="dm-divider"></div>
+            <a href="../practice-areas/auto-accident-personal-injury.html">Auto Accident / Personal Injury</a>
+            <a href="../practice-areas/landlord-representation-in-evictions.html">Landlord Representation in Evictions</a>
+            <a href="../practice-areas/conservatorships.html">Conservatorships</a>
+            <a href="../practice-areas/estates-probates.html">Estates &amp; Probates</a>
+          </div>
+        </div>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <div class="header-cta">
+        <a href="tel:4234088887" class="phone-link">&#9990; 423-408-8887</a>
+      </div>
+      <button class="burger" id="burger" aria-label="Open menu"><i></i><i></i><i></i></button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mm-close" id="mmClose" aria-label="Close menu">&times;</button>
+    <a href="../index.html#philosophy">Philosophy</a>
+    <a href="../index.html#story">About</a>
+    <a href="../index.html#attorneys">Attorneys</a>
+    <a href="../practice-areas/general-civil-law.html">General Civil Law</a>
+    <a href="../practice-areas/breach-of-contract-and-construction-law.html">Breach of Contract &amp; Construction</a>
+    <a href="../practice-areas/juvenile-law.html">Juvenile Law</a>
+    <a href="../practice-areas/family-law.html">Family Law</a>
+    <a href="../practice-areas/criminal-defense.html">Criminal Defense</a>
+    <a href="../practice-areas/auto-accident-personal-injury.html">Auto Accident / Personal Injury</a>
+    <a href="../practice-areas/landlord-representation-in-evictions.html">Landlord / Evictions</a>
+    <a href="../practice-areas/conservatorships.html">Conservatorships</a>
+    <a href="../practice-areas/estates-probates.html">Estates &amp; Probates</a>
+    <a href="../index.html#contact">Contact</a>
+    <div class="mm-foot">
+      <a href="tel:4234088887">&#9990; 423-408-8887</a>
+      <a href="mailto:thefirmtn@gmail.com">thefirmtn@gmail.com</a>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var header  = document.getElementById('header');
+      var menu    = document.getElementById('mobileMenu');
+      var burger  = document.getElementById('burger');
+      var mmClose = document.getElementById('mmClose');
+
+      function onScroll() {
+        header.classList.toggle('scrolled', window.scrollY > 60);
+      }
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
+
+      function openMenu()  { menu.classList.add('open');    document.body.style.overflow = 'hidden'; }
+      function closeMenu() { menu.classList.remove('open'); document.body.style.overflow = ''; }
+      burger.addEventListener('click', openMenu);
+      mmClose.addEventListener('click', closeMenu);
+      menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', closeMenu); });
+    })();
+  </script>
